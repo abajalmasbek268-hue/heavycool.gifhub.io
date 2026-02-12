@@ -1,85 +1,114 @@
 <!DOCTYPE html><html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Лучший отряд ХЭВИ</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Orbitron', sans-serif; background: linear-gradient(135deg, #050b1f, #000814); color: white; overflow-x: hidden; }header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle at center, #001a4d 0%, #000814 70%); animation: fadeIn 2s ease-in-out; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лучший отряд ХЭВИ</title><style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0b0f1a;
+    color: white;
+    text-align: center;
+}
 
-header h1 { font-size: 60px; letter-spacing: 6px; text-shadow: 0 0 25px #0044ff; } header p { margin-top: 20px; font-size: 22px; opacity: 0.8; }
+header {
+    padding: 80px 20px;
+    background-color: #111a33;
+}
 
-.join-btn, .stats-btn { margin-top: 40px; padding: 15px 40px; border: none; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 30px; background: #0044ff; color: white; transition: 0.3s; }
+h1 {
+    font-size: 40px;
+}
 
-.join-btn:hover, .stats-btn:hover { background: #00aaff; box-shadow: 0 0 20px #00aaff; transform: scale(1.05); }
+button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #1e4fff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-.section { padding: 100px 20px; text-align: center; } .section h2 { font-size: 40px; margin-bottom: 40px; text-shadow: 0 0 15px #0044ff; }
+button:hover {
+    background-color: #3c6fff;
+}
 
-.info-text { max-width: 900px; margin: 0 auto 40px auto; font-size: 18px; line-height: 1.8; background: #0a1128; padding: 30px; border-radius: 15px; border: 1px solid #0033cc; }
+.section {
+    padding: 60px 20px;
+}
 
-.cards { display: flex; justify-content: center; flex-wrap: wrap; gap: 50px; margin-top: 40px; } .card { background: #0a1128; border: 2px solid #0033cc; border-radius: 20px; width: 380px; padding: 25px; transition: 0.4s; } .card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 0 30px #0044ff; } .card img { width: 100%; border-radius: 15px; margin-bottom: 20px; } .card h3 { font-size: 28px; margin-bottom: 15px; } .card p { font-size: 16px; line-height: 1.6; opacity: 0.85; }
+.card {
+    background-color: #141c2f;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
 
-.weapon-box { max-width: 900px; margin: 0 auto; text-align: left; background: #0a1128; padding: 40px; border-radius: 20px; border: 2px solid #0044ff; line-height: 1.8; font-size: 18px; }
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-footer { padding: 30px; text-align: center; background: #000814; opacity: 0.7; }
+.weapon-box {
+    background-color: #141c2f;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: left;
+}
 
-@keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-
-@media (max-width: 768px) { header h1 { font-size: 36px; } .section h2 { font-size: 28px; } } </style>
-
-</head>
+a {
+    color: white;
+    text-decoration: none;
+}
+</style></head>
 <body><header>
     <h1>ЛУЧШИЙ ОТРЯД ХЭВИ</h1>
     <p>Сила. Броня. Доминирование.</p>
-    <button class="join-btn" onclick="scrollToHeavy()">Вступить в отряд</button>
-</header><section class="section" id="heavy">
-    <h2>HEAVY — Основной отряд</h2><div class="info-text">
-    <p><strong>HEAVY</strong> — основной отряд, туда вы попадаете сразу и по решению лидера вы можете попасть в элитное подразделение GROM.</p>
-    <br>
-    <p><strong>HEAVY | GROM</strong> — через наше элитное подразделение, где ВЫ можете попасть в Ragnarök.</p>
+    <a href="#heavy"><button>Вступить в отряд</button></a>
+</header><div class="section" id="heavy">
+    <h2>HEAVY — Основной отряд</h2><p>
+HEAVY — основной отряд, туда вы попадаете сразу и по решению лидера вы можете попасть в элитное подразделение GROM.
+</p>
+
+<p>
+HEAVY | GROM — через наше элитное подразделение, где ВЫ можете попасть в Ragnarök.
+</p>
+
+<a href="#weapons"><button>Узнать статистики оружие</button></a>
+
+<div class="card">
+    <img src="heavy1.png" alt="Heavy 1">
+    <h3>HEAVY 1</h3>
+    <p>Броня 3 уровня. Базовый боец отряда.</p>
 </div>
 
-<button class="stats-btn" onclick="scrollToWeapons()">Узнать статистики оружие</button>
-
-<div class="cards">
-    <div class="card">
-        <img src="heavy1.png" alt="Heavy 1">
-        <h3>HEAVY 1</h3>
-        <p>Броня 3 уровня. Базовый боец отряда.</p>
-    </div>
-
-    <div class="card">
-        <img src="heavy2.png" alt="Heavy 2">
-        <h3>HEAVY 2</h3>
-        <p>Продвинутый морф. Доступен бойцам со званием «ОМЕГА‑T3»/попадания в отряд GROM.</p>
-    </div>
+<div class="card">
+    <img src="heavy2.png" alt="Heavy 2">
+    <h3>HEAVY 2</h3>
+    <p>Продвинутый морф 2‑М. Доступен бойцам со званием «ОМЕГА‑T3».</p>
 </div>
 
-</section><section class="section" id="weapons">
+</div><div class="section" id="weapons">
     <h2>Статистика оружия</h2><div class="weapon-box">
-    <p><strong>C480-MWA</strong> — 200 патрон в обойме, 20 урона с 1 выстрела.<br>
+    <p><b>C480-MWA</b> — 200 патрон в обойме, 20 урона с 1 выстрела.<br>
     200 выстрелов за 13 секунд<br>
     перезарядка: 2,65 секунд</p>
-    <br>
-    <p><strong>ПКМ-MWA</strong> — 100 патрон в обойме, 17 урона с 1 выстрела.<br>
+
+    <p><b>ПКМ-MWA</b> — 100 патрон в обойме, 17 урона с 1 выстрела.<br>
     100 выстрелов за 6,45 секунд<br>
     перезарядка: 7,45 секунд</p>
-    <br>
-    <p><strong>Glock21 Mod</strong> — 16 патрон в обойме, 25 урона с 1 выстрела.<br>
+
+    <p><b>Glock21 Mod</b> — 16 патрон в обойме, 25 урона с 1 выстрела.<br>
     16 выстрелов за 2,51 секунд<br>
     перезарядка: 2,30 секунд</p>
 </div>
 
-</section><footer>
-    © 2026 Отряд ХЭВИ | NEAVY Division
-</footer><script>
-function scrollToHeavy() {
-    document.getElementById('heavy').scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToWeapons() {
-    document.getElementById('weapons').scrollIntoView({ behavior: 'smooth' });
-}
-</script></body>
+</div><footer style="padding:20px; background:#111a33; margin-top:40px;">
+© 2026 Отряд ХЭВИ
+</footer></body>
 </html>
